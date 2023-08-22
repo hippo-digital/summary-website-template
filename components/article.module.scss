@@ -1,0 +1,50 @@
+@import '../styles/breakpoints';
+
+.mainArticle {
+  max-width: 66ch;
+
+  ol, ul {
+    margin-left: 1.4rem;
+    li {
+      margin-bottom: 0.8rem;
+    }
+    ol, ul {
+      margin-top: 0.8rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+  blockquote {
+    margin: 0;
+    margin-bottom: 1.5rem;
+    padding: 1rem 2rem;
+    border-left: 0.6rem solid #AAA;
+  }
+
+  blockquote :last-child {
+    margin-bottom: 0;
+  }
+}
+
+.code {
+  font-size: 0.8em;
+  margin-left: 1em !important;
+  margin-right: 1em !important;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+}
+
+.divider {
+  margin: 4rem 0 1.5rem;
+  border: 0;
+  border-bottom: 1px solid var(--hippo-dark-blue);
+}
+
+.pills {
+  margin-bottom: 1.3rem;
+}

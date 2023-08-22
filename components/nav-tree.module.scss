@@ -1,0 +1,22 @@
+.list {
+  list-style: none;
+  padding: 0;
+
+  ul {
+    padding-inline-start: 1.5em;
+  }
+
+  li {
+    margin-bottom: 1em;
+    font-size: 1.2rem;
+  }
+}
+
+.currentNode {
+  font-weight: bold;
+  color: currentColor;
+}
+
+.currentNode:not(:hover):not(:focus) {
+  text-decoration: none;
+}

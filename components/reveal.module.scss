@@ -1,0 +1,39 @@
+.title {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: bold;
+  line-height: 1;
+  cursor: pointer;
+  width: 100%;
+}
+
+.title:hover,
+.title:focus {
+  text-decoration: underline;
+}
+
+.reveal[open] > .title {
+  margin-bottom: 1rem;
+}
+
+// Remove the default details marker so we can style our own consistently
+.title::-webkit-details-marker {
+  display: none;
+}
+
+.title::after {
+  display: inline-block;
+  position: relative;
+  content: '';
+  height: 0.4em;
+  width: 0.4em;
+  border-right: 3px solid var(--hippo-light-green);
+  border-bottom: 3px solid var(--hippo-light-green);
+  transform: rotate(-45deg);
+}
+
+.reveal[open] > .title::after {
+  top: -1px;
+  transform: rotate(45deg);
+}

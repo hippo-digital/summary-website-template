@@ -1,0 +1,47 @@
+{
+    "name": "hippo-digital-engineering-handbook",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "eslint .",
+        "lint:fix": "eslint . --fix",
+        "test": "playwright test",
+        "test:open": "playwright test --ui",
+        "prepare": "husky install"
+    },
+    "dependencies": {
+        "@types/node": "18.11.18",
+        "@types/react": "18.0.26",
+        "eslint-config-next": "13.1.1",
+        "gray-matter": "^4.0.3",
+        "next": "13.1.1",
+        "next-auth": "^4.18.8",
+        "react": "18.2.0",
+        "react-dom": "18.2.0",
+        "react-markdown": "^8.0.5",
+        "react-responsive": "^9.0.2",
+        "react-syntax-highlighter": "^15.5.0",
+        "remark-gfm": "^3.0.1",
+        "remark-heading-id": "^1.0.0",
+        "sass": "^1.58.2",
+        "typescript": "4.9.4"
+    },
+    "devDependencies": {
+        "@playwright/test": "^1.32.2",
+        "@types/react-syntax-highlighter": "^15.5.6",
+        "@typescript-eslint/eslint-plugin": "^5.59.5",
+        "@typescript-eslint/parser": "^5.59.5",
+        "eslint": "^8.40.0",
+        "eslint-config-prettier": "^8.8.0",
+        "eslint-import-resolver-typescript": "^3.5.5",
+        "eslint-plugin-prettier": "^4.2.1",
+        "husky": "^8.0.3",
+        "prettier": "^2.8.8"
+    },
+    "engines": {
+        "node": ">=18"
+    }
+}
