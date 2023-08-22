@@ -26,9 +26,7 @@ const SignIn = ({ hasGoogleSSO }: SignInProps) => {
     if (status === "authenticated") {
         const redirect = router.query["redirect"] as string;
         router.push(redirect ?? "/");
-    } else {
-        signIn("credentials");
-     }
+    }
 
     return (
         <div className={styles.container}>
