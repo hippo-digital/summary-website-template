@@ -33,7 +33,8 @@ const SignIn = ({ hasGoogleSSO }: SignInProps) => {
             <div className={styles.signinForm}>
                 <Logo />
                 <h1>Hippo Summary WebSite Template</h1>
-                { <button onClick={() => signIn("credentials")}>Sign in as development user</button> }
+                {hasGoogleSSO && <button onClick={() => signIn("google")}>Sign in</button>}
+                {isDevelopment && <button onClick={() => signIn("credentials")}>Sign in as development user</button>}
             </div>
         </div>
     );
