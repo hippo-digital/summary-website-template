@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import Logo from "../components/logo";
 import styles from "./signin.module.scss";
 
-const isDevelopment = process.env.NODE_ENV === "development";
+const isDevelopment = true;
 const hasGoogleSSO =
     typeof process.env.GOOGLE_CLIENT_ID !== "undefined" && typeof process.env.GOOGLE_SECRET !== "undefined";
 
