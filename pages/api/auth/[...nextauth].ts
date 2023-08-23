@@ -2,7 +2,7 @@ import NextAuth from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
 import CredentialsProvider from "next-auth/providers/credentials";
 
-const isDevelopment = process.env.NODE_ENV === "development";
+const isDevelopment = true;
 
 const providers = [];
 
