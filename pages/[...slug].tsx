@@ -22,13 +22,13 @@ const Page = (data: PageProps) => {
     const { frontmatter, content } = data.props;
     const router = useRouter();
     const { data: session, status } = useSession({
-        required: true,
+        required: false,
         onUnauthenticated() {
             const path = router.asPath;
             if (path && path !== "/") {
-                return router.push(`/signin?redirect=${path}`);
+                return router.push('${path}');
             } else {
-                return router.push(`/signin`);
+                return router.push(`/`);
             }
         },
     });
