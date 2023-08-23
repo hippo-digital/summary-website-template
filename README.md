@@ -1,6 +1,6 @@
-# Hippo Engineering and Data handbook
+# Hippo Summary WebSite Template
 
-Visit the live website at [eng-data-handbook.internal.hippodigital.cloud](https://www.eng-data-handbook.internal.hippodigital.cloud/).
+Visit the live website at [summarywebsitetemplate.internal.hippodigital.cloud](https://summarywebsitetemplate.internal.hippodigital.cloud/).
 
 # Getting Started
 
