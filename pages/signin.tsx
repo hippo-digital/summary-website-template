@@ -41,7 +41,7 @@ const SignIn: NextPage = (props): JSX.Element => {
     <div className={styles.container}>
       <div className={styles.signinForm}>
         <Logo />
-        <h1>Hippo Summary</h1>
+        <h1>Hippo Summary WebSite Template</h1>
         <form className={styles.passwordForm} onSubmit={handleSubmit}>
           <input
             className={styles.input}
