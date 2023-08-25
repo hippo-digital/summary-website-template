@@ -61,7 +61,7 @@ const Page = (data: PageProps) => {
       <main className={styles.main}>
         <div className={styles.sidebar}>
           {isSmallerScreen ? (
-            <Reveal className={styles.contentsReveal} title="Contents">
+            <Reveal className={styles.contentsReveal} title="Content">
               <NavTree tree={data.metaDataTree} />
             </Reveal>
           ) : (

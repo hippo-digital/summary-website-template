@@ -21,7 +21,6 @@ const Header = (props: HeaderProps) => {
           Hippo Summary Website
         </Link>
         <div className={styles.actions}>
-          <SearchBox placeholder={"Enter a tag"} options={tags} />
           <a className={styles.signOut} onClick={() => signOut()}>
             Sign out
           </a>
