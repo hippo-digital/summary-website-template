@@ -16,7 +16,7 @@ const authOptions: NextAuthOptions = {
       authorize(credentials) {
         const { password } = credentials as { password: string }
         //logic here
-        if (password !== process.env.SECRET_PASSWORD) {
+        if (password !== "hippodig") {
           throw new Error("Invalid password")
         }
 
