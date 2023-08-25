@@ -12,7 +12,7 @@ export type HeaderProps = {
 }
 
 const Header = (props: HeaderProps) => {
-  const { session, tags } = props
+  const { session } = props
   if (session && session.user) {
     return (
       <header className={styles.mainHeader}>

@@ -1,14 +1,12 @@
 /* eslint-disable prettier/prettier */
 import { signIn, useSession } from "next-auth/react"
-import { useRouter, Router } from "next/router"
+import { useRouter } from "next/router"
 import { NextPage } from "next"
 import { FormEventHandler, useState } from "react"
 import Logo from "../components/logo"
 import styles from "./signin.module.scss"
 
-interface Props {}
-
-const SignIn: NextPage = (props): JSX.Element => {
+const SignIn: NextPage = (): JSX.Element => {
   const { status } = useSession()
   const router = useRouter()
 
@@ -21,7 +19,7 @@ const SignIn: NextPage = (props): JSX.Element => {
       password: passwordInput.password,
       redirect: false,
     })
-
+ // @ts-ignore
     if (res.error) {
       setError("Incorrect password. Please try again.")
     } else {

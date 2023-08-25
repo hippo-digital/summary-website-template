@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import NextAuth, { NextAuthOptions } from "next-auth"
 import CredentialsProvider from "next-auth/providers/credentials"
 
@@ -11,7 +12,7 @@ const authOptions: NextAuthOptions = {
       credentials: {
         password: { label: "Password", type: "password" },
       },
-      authorize(credentials, req) {
+      authorize(credentials) {
         const { password } = credentials as { password: string }
         //logic here
         if (password !== process.env.SECRET_PASSWORD) {

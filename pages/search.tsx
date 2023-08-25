@@ -17,7 +17,6 @@ import styles from "./search.module.scss"
 import Reveal from "../components/reveal"
 import Header from "../components/header"
 import NavTree from "../components/nav-tree"
-import Tags from "../components/tags"
 
 interface SearchPageProps {
   metaDataTree: Tree<Metadata>

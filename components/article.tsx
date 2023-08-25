@@ -13,11 +13,11 @@ import Tags from "./tags"
 export type ArticleProps = {
   frontmatter: Frontmatter
   content: string
-  path: string
+
 }
 
 const Article = (props: ArticleProps) => {
-  const { frontmatter, content, path, ...rest } = props
+  const { frontmatter, content, ...rest } = props
 
   const linkTransformer = (href: string) => {
     if (href.includes(".md")) {
@@ -36,10 +36,8 @@ const Article = (props: ArticleProps) => {
         components={{
           img({ src, alt }) {
             // eslint-disable-next-line @next/next/no-img-element
-            return (
-              <img src={src ?? ""} alt={alt ?? ""} className={styles.center} />
-            )
-          },
+            return <img src={src ?? ""} alt={alt ?? ""} className={styles.center} />;
+        },
           code({ inline, className, children }) {
             const match = /language-(\w+)/.exec(className || "")
             return !inline && match ? (
