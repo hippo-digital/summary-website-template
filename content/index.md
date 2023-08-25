@@ -1,14 +1,11 @@
 ---
-title: 'Introduction'
 order: 1
-tags: 
-    - introduction
-    - start here
+tags:
+  - start here
 ---
 
-# Hippo Summary WebSite Template
+## Hippo Summary Website Template
 
-## Scope
+Hippo has successfully developed multiple versions of a summary website that provides stakeholders with a clear and concise way to access vital details, especially when under time constraints.
 
-Initial MVP : Just using AWS Amplify. Connecting it to a Github repo and it will handle Build and Deployment. 
-Point of this is to make the updating and editing of pages as seamless as possible.
+Every member of the Hippo team can effortlessly craft their summary website version, populating it with rich content, images, and videos that exemplify the work they've accomplished.

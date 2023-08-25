@@ -1,41 +1,40 @@
 @import "../styles/_breakpoints.scss";
 
-
 @include min-lg {
-    .main {
-        display: grid;
-        grid-template-areas: "sidebar content";
-        grid-template-columns: min-content auto;
-    }
+  .main {
+    display: grid;
+    grid-template-areas: "sidebar content";
+    grid-template-columns: min-content auto;
+  }
 }
 
 .sidebar {
-    grid-area: sidebar;
-    padding: 2rem;
-    @include lg {
-        padding-top: 0.5rem;
-        padding-bottom: 0.5rem;
-    }
-    @include md {
-        padding-left: 1.3rem;
-        padding-right: 1.3rem;
-    }
-    min-width: 20ch;
-    background: var(--hippo-grey);
+  grid-area: sidebar;
+  padding: 2rem;
+  @include lg {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+  @include md {
+    padding-left: 1.3rem;
+    padding-right: 1.3rem;
+  }
+  min-width: 20ch;
+  background: var(--hippo-white);
 }
 
 .content {
-    grid-area: content;
-    padding: 2rem;
-    @include md {
-      padding-left: 1.3rem;
-      padding-right: 1.3rem;
-    }
+  grid-area: content;
+  padding: 2rem;
+  @include md {
+    padding-left: 1.3rem;
+    padding-right: 1.3rem;
+  }
 }
 
 .contentsReveal :global(> summary) {
-    font-size: 1.3rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    margin-bottom: 0 !important;
+  font-size: 1.3rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-bottom: 0 !important;
 }
