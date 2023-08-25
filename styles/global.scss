@@ -22,6 +22,7 @@
   --hippo-pink: #ffa3b5;
   --hippo-blue: #88dbdf;
   --hippo-white: #ffffff;
+  --hippo-black: #000000;
 }
 
 * {
@@ -31,8 +32,8 @@
 body {
   font-size: calc(16px + 0.3vw);
   font-family: "DM Sans", serif;
-  background-color: var(--hippo-light-grey);
-  color: var(--hippo-dark-blue);
+  background-color: var(--hippo-white);
+  color: var(--hippo-black);
   margin: 0;
   padding: 0;
   line-height: 1.5;
@@ -56,7 +57,12 @@ h4 {
   font-size: 1.3em;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: bold;
 }
 
@@ -64,7 +70,8 @@ p {
   font-size: 1.3rem;
 }
 
-ol, ul {
+ol,
+ul {
   padding: 0;
   margin-top: 0;
 }
@@ -77,14 +84,15 @@ a {
   }
 }
 
-input, label {
+input,
+label {
   display: inline-block;
   vertical-align: middle;
 }
 
 table {
   border-spacing: 0;
-  
+
   th {
     color: var(--hippo-white);
     background-color: var(--hippo-dark-blue);
@@ -96,14 +104,15 @@ table {
   }
 }
 
-button, input[type=submit] {
+button,
+input[type="submit"] {
   font-size: 1rem;
-  padding: 0.5em 1em;
+  padding: 0.3em;
   background: var(--hippo-light-green);
   color: var(--hippo-white);
-  border-radius: 28px;
+  border-radius: 8px;
   border: none;
-  font-weight: 300;
+  font-weight: 100;
   font-family: "DM Sans", sans-serif;
   cursor: pointer;
   white-space: nowrap;
@@ -115,10 +124,12 @@ button, input[type=submit] {
   }
 }
 
-input[type=search i], input[type=text i] {
+input[type="search" i],
+input[type="text" i],
+input[type="password" i] {
   border: solid 2px var(--hippo-light-green);
   font-size: 1rem;
-  padding: 5px 5px 5px 5px;
+  padding: 2px 2px 2px 2px;
   background: var(--hippo-white);
   color: var(--hippo-light-green);
   border-radius: 0.5em;

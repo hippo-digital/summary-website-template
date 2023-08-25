@@ -1,43 +1,62 @@
-import { signIn, useSession } from "next-auth/react";
-import { useRouter } from "next/router";
-import Logo from "../components/logo";
-import styles from "./signin.module.scss";
+import { signIn, useSession } from "next-auth/react"
+import { useRouter, Router } from "next/router"
+import { NextPage } from "next"
+import { FormEventHandler, useState } from "react"
+import Logo from "../components/logo"
+import styles from "./signin.module.scss"
 
-const isDevelopment = true;
-const hasGoogleSSO =
-    typeof process.env.GOOGLE_CLIENT_ID !== "undefined" && typeof process.env.GOOGLE_SECRET !== "undefined";
+interface Props {}
 
-interface SignInProps {
-    hasGoogleSSO: boolean;
-}
+const SignIn: NextPage = (props): JSX.Element => {
+  const { status } = useSession()
+  const router = useRouter()
 
-export async function getStaticProps() {
-    return {
-        props: {
-            hasGoogleSSO,
-        } as SignInProps,
-    };
-}
+  const [passwordInput, setPasswordInput] = useState({ password: "" })
+  const [error, setError] = useState("")
+  const handleSubmit: FormEventHandler<HTMLFormElement> = async (e) => {
+    e.preventDefault()
 
-const SignIn = ({ hasGoogleSSO }: SignInProps) => {
-    const { status } = useSession();
-    const router = useRouter();
+    const res = await signIn("credentials", {
+      password: passwordInput.password,
+      redirect: false,
+    })
 
-    if (status === "authenticated") {
-        const redirect = router.query["redirect"] as string;
-        router.push(redirect ?? "/");
+    if (res.error) {
+      setError("Incorrect password. Please try again.")
+    } else {
+      setError("")
     }
 
-    return (
-        <div className={styles.container}>
-            <div className={styles.signinForm}>
-                <Logo />
-                <h1>Hippo Summary WebSite Template</h1>
-                {hasGoogleSSO && <button onClick={() => signIn("google")}>Sign in</button>}
-                {isDevelopment && <button onClick={() => signIn("credentials")}>Sign in as development user</button>}
-            </div>
-        </div>
-    );
-};
+    console.log(res)
+  }
 
-export default SignIn;
+  if (status === "authenticated") {
+    const redirect = router.query["redirect"] as string
+    router.push(redirect ?? "/")
+  }
+
+  return (
+    <div className={styles.container}>
+      <div className={styles.signinForm}>
+        <Logo />
+        <h1>Hippo Summary</h1>
+        <form className={styles.passwordForm} onSubmit={handleSubmit}>
+          <input
+            className={styles.input}
+            value={passwordInput.password}
+            onChange={({ target }) =>
+              setPasswordInput({ ...passwordInput, password: target.value })
+            }
+            placeholder="Enter password"
+            type="password"
+            name="login"
+          />
+          <input type="submit" value="Password" />
+          {error && <p className={styles.error}>{error}</p>}
+        </form>
+      </div>
+    </div>
+  )
+}
+
+export default SignIn

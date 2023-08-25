@@ -2,7 +2,7 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  font-weight: bold;
+
   line-height: 1;
   cursor: pointer;
   width: 100%;
@@ -25,7 +25,7 @@
 .title::after {
   display: inline-block;
   position: relative;
-  content: '';
+  content: "";
   height: 0.4em;
   width: 0.4em;
   border-right: 3px solid var(--hippo-light-green);

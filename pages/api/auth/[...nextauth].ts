@@ -1,29 +1,27 @@
-import NextAuth from "next-auth";
-import GoogleProvider from "next-auth/providers/google";
-import CredentialsProvider from "next-auth/providers/credentials";
+import NextAuth, { NextAuthOptions } from "next-auth"
+import CredentialsProvider from "next-auth/providers/credentials"
 
-const isDevelopment = process.env.NODE_ENV === "development";
+const authOptions: NextAuthOptions = {
+  session: {
+    strategy: "jwt",
+  },
+  providers: [
+    CredentialsProvider({
+      type: "credentials",
+      credentials: {
+        password: { label: "Password", type: "password" },
+      },
+      authorize(credentials, req) {
+        const { password } = credentials as { password: string }
+        //logic here
+        if (password !== process.env.SECRET_PASSWORD) {
+          throw new Error("Invalid password")
+        }
 
-const providers = [];
-
-// When developing locally allow people to login without using Google Sign-on.
-if (isDevelopment) {
-    providers.push(
-        CredentialsProvider({
-            name: "development user",
-            credentials: {},
-            authorize: () => ({ id: "dev" }),
-        })
-    );
+        return { id: "1234", name: "John Doe", email: "john@gmail.com" }
+      },
+    }),
+  ],
 }
 
-providers.push(
-    GoogleProvider({
-        // @ts-ignore
-        clientId: process.env.GOOGLE_CLIENT_ID,
-        // @ts-ignore
-        clientSecret: process.env.GOOGLE_SECRET,
-    })
-);
-
-export default NextAuth({ providers });
+export default NextAuth(authOptions)

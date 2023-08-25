@@ -1,27 +1,22 @@
 .tagButtonSection {
-    display: flex;
-    gap: 0.8rem;
-    flex-wrap: wrap;
-    margin-bottom: 2rem;
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
 }
 
 .tagButton {
-    display: inline-block;
-    font-size: 1rem;
-    border-radius: 8px;
-    padding: 0.2rem 0.5rem;
-    margin-right: 0.4rem;
-    color: var(--hippo-white);
-    white-space: nowrap;
-    background: var(--hippo-light-green);
-    border: solid 2px var(--hippo-light-green);
-}
-
-.tagButton:hover {
-    background: var(--hippo-grey);
-    color: var(--hippo-light-green);
+  display: inline-block;
+  font-size: 1rem;
+  border-radius: 8px;
+  padding: 0.2rem 0.5rem;
+  margin-right: 0.4rem;
+  color: var(--hippo-dark-green);
+  white-space: nowrap;
+  // background: var(--hippo-light-green);
+  // border: solid 2px var(--hippo-light-green);
 }
 
 .tagButton:not(:hover):not(:focus) {
-    text-decoration: none;
+  text-decoration: none;
 }
