@@ -73,7 +73,7 @@ const Page = (data: PageProps) => {
           <Article
             frontmatter={frontmatter}
             content={content}
-            path={data.path}
+            
           />
         </div>
       </main>
