@@ -12,6 +12,7 @@ const authOptions: NextAuthOptions = {
       credentials: {
         password: { label: "Password", type: "password" },
       },
+      
       authorize(credentials) {
         const { password } = credentials as { password: string }
         //logic here

@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-empty-interface */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable prettier/prettier */
 import { signIn, useSession } from "next-auth/react"
 import { useRouter } from "next/router"
@@ -6,7 +8,9 @@ import { FormEventHandler, useState } from "react"
 import Logo from "../components/logo"
 import styles from "./signin.module.scss"
 
-const SignIn: NextPage = (): JSX.Element => {
+interface Props {}
+
+const SignIn: NextPage = (props): JSX.Element => {
   const { status } = useSession()
   const router = useRouter()
 
