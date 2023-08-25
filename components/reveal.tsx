@@ -1,10 +1,11 @@
-import React, { type ReactNode } from "react";
-import styles from "./reveal.module.scss";
+/* eslint-disable prettier/prettier */
+import React, { type ReactNode } from "react"
+import styles from "./reveal.module.scss"
 
 export type RevealProps = {
-    className?: string;
-    title: string;
-    isOpen?: boolean;
+    className?: string
+    title: string
+    isOpen?: boolean
     children: string | ReactNode | ReactNode[];
 };
 
@@ -15,4 +16,4 @@ const Reveal = ({ className, title, isOpen = false, children }: RevealProps) => 
     </details>
 );
 
-export default Reveal;
+export default Reveal

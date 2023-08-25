@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { Frontmatter } from "../lib/content-api"
 import React from "react"
 import styles from "./article.module.scss"

@@ -1,9 +1,9 @@
+/* eslint-disable prettier/prettier */
 import { Session } from "next-auth"
 import { signOut } from "next-auth/react"
 import Link from "next/link"
 import React from "react"
 import Logo from "./logo"
-import SearchBox from "./search-box"
 import styles from "./header.module.scss"
 
 export type HeaderProps = {

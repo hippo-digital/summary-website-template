@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import React from "react"
 import { Tree } from "../lib/tree"
 import { Metadata } from "../lib/content-api"

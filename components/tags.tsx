@@ -1,14 +1,15 @@
-import { Frontmatter } from "../lib/content-api";
-import React from "react";
-import Link from "next/link";
-import styles from "./tags.module.scss";
+/* eslint-disable prettier/prettier */
+import { Frontmatter } from "../lib/content-api"
+import React from "react"
+import Link from "next/link"
+import styles from "./tags.module.scss"
 
 export type TagsProps = {
-    frontmatter: Frontmatter;
+    frontmatter: Frontmatter
 };
 
 const Tags = (props: TagsProps) => {
-    const { frontmatter } = props;
+    const { frontmatter } = props
 
     return (
         <div className={styles.tagButtonSection}>
@@ -21,4 +22,4 @@ const Tags = (props: TagsProps) => {
     );
 };
 
-export default Tags;
+export default Tags

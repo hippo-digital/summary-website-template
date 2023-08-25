@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { signIn, useSession } from "next-auth/react"
 import { useRouter, Router } from "next/router"
 import { NextPage } from "next"

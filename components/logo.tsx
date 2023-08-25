@@ -1,4 +1,5 @@
-import styles from "./logo.module.scss";
+/* eslint-disable prettier/prettier */
+import styles from "./logo.module.scss"
 
 const Logo = ({ className = "", hasUnderline = false }) => (
     <svg

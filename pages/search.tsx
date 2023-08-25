@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import React from "react"
 import { useMediaQuery } from "react-responsive"
 import { GetStaticProps } from "next"
