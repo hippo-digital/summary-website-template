@@ -18,6 +18,7 @@ const authOptions: NextAuthOptions = {
           throw new Error("Invalid password")
         }
 
+
         return { id: "1234", name: "John Doe", email: "john@gmail.com" }
       },
     }),

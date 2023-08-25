@@ -26,7 +26,6 @@ const SignIn: NextPage = (props): JSX.Element => {
     } else {
       setError("")
     }
-
     console.log(res)
   }
 
