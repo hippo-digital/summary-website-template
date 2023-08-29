@@ -18,7 +18,7 @@ const Header = (props: HeaderProps) => {
       <header className={styles.mainHeader}>
         <Link href="/" className={styles.logo}>
           <Logo className={styles.logoImage} hasUnderline={true} />
-          Hippo Summary Website
+          Hippo Summary Website Template
         </Link>
         <div className={styles.actions}>
           <a className={styles.signOut} onClick={() => signOut()}>
