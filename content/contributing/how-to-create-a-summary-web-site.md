@@ -1,6 +1,6 @@
 ---
 title: 'How to create a summary website'
-order: 1
+order: 15
 tags:
 - contributing
 - how to create a summary website
